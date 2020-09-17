@@ -21,7 +21,7 @@ function App() {
     });
 
   return (
-    <div className='container bg-black text-white'>
+    <div className='container bg-black text-white pr-4 pl-4'>
       <Movielist />
     </div>
   );

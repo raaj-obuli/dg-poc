@@ -2,13 +2,15 @@ import React from 'react';
 
 function Moviecard(props) {
   return (
-    <div className='w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/8'>
+    //<div className='w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/8 pr-4'>
+    <div className='movielist__wrapper'>
       <img
-        className='sm:object-none w-full'
+        className='pb-2'
+        // className='sm:object-none w-full'
         src={`./images/${props.poster}`}
         alt=''
       />
-      <h4>{props.name}</h4>
+      <h4 className='text-sm'>{props.name}</h4>
     </div>
   );
 }
