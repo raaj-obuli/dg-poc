@@ -8,11 +8,16 @@ function Movielist() {
 
   return (
     <div className='movielist'>
-      {movielist?.page.title}
-      {movielistItems &&
-        movielistItems.map((item, i) => (
-          <Moviecard key={i} name={item.name} poster={item['poster-image']} />
-        ))}
+      <div className='navbar'>
+        {movielist?.page.title}
+        SEARCH
+      </div>
+      <div class=' movielist flex flex-wrap'>
+        {movielistItems &&
+          movielistItems.map((item, i) => (
+            <Moviecard key={i} name={item.name} poster={item['poster-image']} />
+          ))}
+      </div>
     </div>
   );
 }

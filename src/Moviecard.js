@@ -2,9 +2,13 @@ import React from 'react';
 
 function Moviecard(props) {
   return (
-    <div className='moviecard'>
-      <p>{props.name}</p>
-      <img src={`./images/${props.poster}`} alt='' />
+    <div className='w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 xl:w-1/8'>
+      <img
+        className='sm:object-none w-full'
+        src={`./images/${props.poster}`}
+        alt=''
+      />
+      <h4>{props.name}</h4>
     </div>
   );
 }
