@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { getMovieList, getSearchResult } from './actions';
+import Movielist from './Movielist';
+
+import store from './store';
 
 function App() {
+  store.subscribe(() => console.log(store.getState()));
+
+  //Load from local json and store the data
+  fetch('./data/page1.json')
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      store.dispatch(getMovieList(data));
+    })
+    .catch((err) => {
+      console.log('Error Reading data ' + err);
+    });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Movielist />
     </div>
   );
 }
