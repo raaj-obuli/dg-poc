@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Moviecard from './Moviecard';
-import { fetchMovies } from './fetch';
+import { fetchMovies } from '../fetch';
 import InfiniteScroll from 'react-infinite-scroller';
 
 class Movielist extends React.Component {

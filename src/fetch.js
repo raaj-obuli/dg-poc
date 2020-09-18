@@ -1,4 +1,4 @@
-import { getMovieList, getSearchResult } from './actions';
+import { getMovieList, getSearchResult } from './actions/actions';
 import store from './store';
 
 export function fetchMovies(page) {
