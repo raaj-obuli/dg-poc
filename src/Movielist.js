@@ -23,7 +23,7 @@ class Movielist extends React.Component {
             </div>
           }
         >
-          <div className='sticky top-0 pb-4 pt-6 bg-black'>
+          <div className='sticky top-0 pb-4 pt-6 bg-black z-10'>
             <span className='inline-block align-bottom'>
               {this.props.title}
             </span>

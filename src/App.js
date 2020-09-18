@@ -4,7 +4,7 @@ import Movielist from './Movielist';
 
 function App() {
   return (
-    <div className='container bg-black text-white pr-4 pl-4'>
+    <div className='container items-center justify-center bg-black text-white pr-4 pl-4'>
       <Movielist />
     </div>
   );
