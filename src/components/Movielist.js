@@ -11,7 +11,7 @@ class Movielist extends React.Component {
 
   render() {
     return (
-      <div className='movielist'>
+      <div className='movielist pb-16'>
         <InfiniteScroll
           pageStart={0}
           loadMore={this.props.fetch}

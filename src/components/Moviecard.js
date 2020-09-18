@@ -12,7 +12,7 @@ function Moviecard(props) {
 
   return (
     <div className='movielist__wrapper'>
-      <LazilyLoadedImage src={poster} />
+      <LazilyLoadedImage src={poster} alt={props.name} />
       <img className='pb-2' alt='' />
       <h4 className='text-sm'>{props.name}</h4>
     </div>
