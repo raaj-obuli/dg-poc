@@ -1,15 +1,18 @@
 import * as actions from './actionTypes';
 
 export function getMovieList(data) {
-  let totalContentItems = parseInt(data['total-content-items']);
-  let pageSizeReturned = parseInt(data['page-size-returned']);
+  const totalContentItems = parseInt(data['total-content-items']);
+  const pageSizeReturned = parseInt(data['page-size-returned']);
+  const movieList = data['content-items'].content;
+  const pageNo = parseInt(data['page-num-requested']);
 
   return {
     type: actions.GET_MOVIE_LIST,
-    payload: data['content-items'].content,
+    title: data.title,
+    payload: movieList,
     totalContentItems: totalContentItems,
     pageSizeReturned: pageSizeReturned,
-    pageNo: parseInt(data['page-num-requested']),
+    pageNo: pageNo,
   };
 }
 

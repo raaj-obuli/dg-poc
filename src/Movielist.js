@@ -1,24 +1,12 @@
 import React from 'react';
-import { useSelector, connect } from 'react-redux';
+import { connect } from 'react-redux';
 import Moviecard from './Moviecard';
 import { fetchMovies } from './fetch';
 import InfiniteScroll from 'react-infinite-scroller';
-import store from './store';
 
-//const movielist = useSelector((state) => state.movielist);
 class Movielist extends React.Component {
-  //let movielistItems = movielist?.content;
   loadMore() {
-    // console.log('pageSizeReturned ? ', this.props.hasMore);
-    console.log('pageNo ? ', this.props.pageNo);
-    console.log('hasMore ? ', this.props.hasMore);
-    if (this.props.pageNo > 0 && this.props.hasMore === false) {
-      return false;
-    } else {
-      return true;
-    }
-
-    //if (this.props.hasMore >= 20) return true;
+    return this.props.hasMore ? true : false;
   }
 
   render() {
@@ -27,6 +15,7 @@ class Movielist extends React.Component {
         <InfiniteScroll
           pageStart={0}
           loadMore={this.props.fetch}
+          initialLoad={true}
           hasMore={this.loadMore()}
           loader={
             <div className='loader' style={{ textAlign: 'center' }} key={0}>
@@ -36,7 +25,7 @@ class Movielist extends React.Component {
         >
           <div className='sticky top-0 pb-4 pt-6 bg-black'>
             <span className='inline-block align-bottom'>
-              {/* {movielist?.page.title} */}
+              {this.props.title}
             </span>
             <span>SEARCH</span>
           </div>
@@ -61,12 +50,12 @@ const mapStateToProps = (state) => {
     pageSizeReturned: state.pageSizeReturned,
     hasMore: state.hasMore,
     pageNo: state.pageNo,
+    title: state.title,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // dispatching plain actions
     fetch: (page) => dispatch(fetchMovies(page)),
   };
 };
