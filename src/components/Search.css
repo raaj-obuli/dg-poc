@@ -1,5 +1,5 @@
 input[type='text'] {
-  height: 40px;
+  height: 30px;
   display: inline-block;
   font-weight: 200;
   border: none;
@@ -8,12 +8,15 @@ input[type='text'] {
   padding-right: 40px;
   width: 0px;
   position: absolute;
-  top: 0;
+  top: 5px;
   right: 0;
-  background: none;
   z-index: 3;
   transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
   color: white;
+  cursor: pointer;
+  background: url('https://www.iconsdb.com/icons/preview/white/search-13-xxl.png')
+    center center no-repeat;
+  background-size: 20px 20px;
   cursor: pointer;
 }
 
@@ -22,7 +25,8 @@ input[type='text']:focus:hover {
 }
 
 input[type='text']:focus {
-  width: 200px;
+  background: none;
+  width: 170px;
   z-index: 1;
   border-bottom: 1px solid #f3f3f3;
   cursor: text;

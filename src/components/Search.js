@@ -4,9 +4,6 @@ import { fetchSearch } from '../fetch';
 import './Search.css';
 
 class Search extends Component {
-  onClick() {
-    console.log('HERE');
-  }
   render() {
     const { search, value } = this.props;
 
@@ -21,15 +18,6 @@ class Search extends Component {
           value={value}
           className='focus:outline-none'
         />
-        <input
-          className='w-4'
-          id='search_submit'
-          src='https://www.iconsdb.com/icons/preview/white/search-13-xxl.png'
-          value='Search'
-          type='image'
-          alt='search'
-        />
-        {/* <input id='search_submit' value='Search' type='submit' /> */}
       </div>
     );
   }
