@@ -5,8 +5,10 @@
 * Images are lazily loaded for better user experience.
 * Search by name and display relavant movies. 
 
+### Built With
+<hr>
 - React, Redux 
-- Tailwind CSS, 
+- Tailwind CSS https://tailwindcss.com/
 - React infinite Scroller https://www.npmjs.com/package/react-infinite-scroller
 - React Lazy Load Image Component https://www.npmjs.com/package/react-lazy-load-image-component
 
@@ -14,7 +16,11 @@
 
 [Demo](https://sudmon200.github.io/dg-poc/)
 
+### Installation
+<hr>
 1. Clone the repo.
 2. Install dependencies `npm install` 
 3. Start the local server `npm start`
 4. Load http://localhost:3000/
+
+
