@@ -10,7 +10,7 @@ export function fetchMovies(page) {
       .then((data) => {
         setTimeout(() => {
           store.dispatch(getMovieList(data.page));
-        }, 300);
+        }, 300); //faking a loading time
       })
       .catch((err) => {
         console.log('Error Reading data ' + err);

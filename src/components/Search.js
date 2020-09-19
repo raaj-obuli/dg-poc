@@ -21,7 +21,15 @@ class Search extends Component {
           value={value}
           className='focus:outline-none'
         />
-        <input id='search_submit' value='Rechercher' type='submit' />
+        <input
+          className='w-4'
+          id='search_submit'
+          src='https://www.iconsdb.com/icons/preview/white/search-13-xxl.png'
+          value='Search'
+          type='image'
+          alt='search'
+        />
+        {/* <input id='search_submit' value='Search' type='submit' /> */}
       </div>
     );
   }

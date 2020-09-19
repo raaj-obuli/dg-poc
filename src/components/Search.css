@@ -40,9 +40,16 @@ input[type='submit'] {
   position: absolute;
   top: 0;
   right: 0px;
-  z-index: 2;
+  z-index: 210;
   cursor: pointer;
   opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.9s ease;
+}
+#search_submit {
+  position: absolute;
+  top: 15px;
+  right: 8px;
   cursor: pointer;
   transition: opacity 0.9s ease;
 }
