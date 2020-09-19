@@ -8,16 +8,28 @@ class Search extends Component {
     const { search, value } = this.props;
 
     return (
-      <div className='flex-1 text-right text-gray-600 relative'>
-        <input
-          id='search'
-          name='search'
-          type='text'
-          placeholder='search'
-          onChange={(e) => search(e.target.value)}
-          value={value}
-          className='focus:outline-none'
-        />
+      <div className='searchBox flex-1 text-right text-gray-600 relative'>
+        <div className='flex'>
+          <div className='flex-1 '>
+            <input
+              id='search'
+              name='search'
+              type='text'
+              placeholder='search'
+              onChange={(e) => search(e.target.value)}
+              value={value}
+              className='focus:outline-none'
+              onBlur={() => search('')}
+            />
+          </div>
+          <div className='flex-1 '>
+            <img
+              src='https://www.iconsdb.com/icons/preview/white/search-13-xxl.png'
+              alt=''
+              className='searchIcon'
+            />
+          </div>
+        </div>
       </div>
     );
   }
