@@ -1,6 +1,6 @@
 # Movie Listing Page PoC using React & Redux
 
-- Data fetched from an API and loaded on the browser. 
+- Data fetched from APIs and loaded on the browser. 
 - Infinite scrolling for seamless expereince. 
 - Images are lazily loaded for better user experience.
 - Search by name and display relavant movies. 
