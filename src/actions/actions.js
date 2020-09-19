@@ -16,11 +16,9 @@ export function getMovieList(data) {
   };
 }
 
-export function getSearchResult(search) {
+export function getSearch(key) {
   return {
-    type: actions.GET_SEARCH_RESULT,
-    payload: {
-      search: search,
-    },
+    type: actions.SEARCH,
+    search: key,
   };
 }

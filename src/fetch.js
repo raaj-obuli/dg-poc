@@ -1,4 +1,4 @@
-import { getMovieList, getSearchResult } from './actions/actions';
+import { getMovieList, getSearch } from './actions/actions';
 import store from './store';
 
 export function fetchMovies(page) {
@@ -8,10 +8,16 @@ export function fetchMovies(page) {
         return response.json();
       })
       .then((data) => {
-        store.dispatch(getMovieList(data.page));
+        setTimeout(() => {
+          store.dispatch(getMovieList(data.page));
+        }, 300);
       })
       .catch((err) => {
         console.log('Error Reading data ' + err);
       });
   };
+}
+
+export function fetchSearch(key) {
+  return store.dispatch(getSearch(key));
 }

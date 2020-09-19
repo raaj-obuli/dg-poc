@@ -7,6 +7,7 @@ const initialState = {
   pageNo: 0,
   totalContentItems: null,
   title: '',
+  search: '',
 };
 
 export default function reducer(state = initialState, action) {
@@ -25,8 +26,8 @@ export default function reducer(state = initialState, action) {
         pageNo: action.pageNo,
         title: action.title,
       };
-    case actions.GET_SEARCH_RESULT:
-      return { ...state, search: action.payload.search };
+    case actions.SEARCH:
+      return { ...state, search: action.search };
     default:
       return state;
   }
