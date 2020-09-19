@@ -24,7 +24,7 @@ class Search extends Component {
           </div>
           <div className='flex-1 '>
             <img
-              src='https://www.iconsdb.com/icons/preview/white/search-13-xxl.png'
+              src={process.env.PUBLIC_URL + '/images/search.png'}
               alt=''
               className='searchIcon'
             />
