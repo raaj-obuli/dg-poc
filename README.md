@@ -5,6 +5,8 @@
 - Images are lazily loaded for better user experience.
 - Search by name and display relavant movies. 
 
+
+
 [Demo](https://sudmon200.github.io/dg-poc/)
 
 1. Clone the repo.
